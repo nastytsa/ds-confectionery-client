@@ -8,4 +8,5 @@ import lombok.Data;
 public class WorkerPayload {
     private String name;
     private String surname;
+    private double salary;
 }

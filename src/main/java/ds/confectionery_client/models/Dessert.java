@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class Dessert {
     private String dessert_id;
-    private dessertName name;
+    private String name;
     private double price;
 }

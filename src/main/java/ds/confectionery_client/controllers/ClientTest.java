@@ -20,9 +20,9 @@ public class ClientTest {
         for (int i=0; i<clientsNumber; i++){
             Request post = Request.builder()
                     .type(new HttpPost(endPoint))
-                    .body(new ClientPayload(TestData.getName(), TestData.getSurname(), TestData.getTemperature()))
+                    .body(new ClientPayload(TestData.getName(), TestData.getSurname()))
                     .response(Client.class).build();
-            Logging.printObject(post.send(), "Creating Client");
+            Logging.printObject(post.send(), "Creating a Client");
         }
     }
 
@@ -38,6 +38,6 @@ public class ClientTest {
 
     public void testService() throws IOException{
         System.out.println("Client service testing".toUpperCase());
-        createClients(1);
+        createClients(2);
     }
 }

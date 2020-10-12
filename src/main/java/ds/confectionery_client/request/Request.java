@@ -14,7 +14,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 
-import javax.annotation.Resource;
 import java.io.IOException;
 
 @Builder
@@ -53,7 +52,7 @@ public class Request {
             if (!result.equals(""))
                 Logging.printError(makeObject(result, ErrorPayload.class));
             else
-                Logging.unhendeledError();
+                Logging.unhandledError();
         }
 
         return result;

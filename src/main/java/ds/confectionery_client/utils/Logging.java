@@ -11,7 +11,7 @@ public final class Logging {
     public static final String ANSI_GREEN = "\u001B[32m";
 
 
-    public static String beautiflJson(String json){
+    public static String beautifulJson(String json){
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         JsonParser jp = new JsonParser();
         JsonElement je = jp.parse(json);
@@ -22,16 +22,16 @@ public final class Logging {
         Gson gson = new Gson();
         String json = gson.toJson(object);
         System.out.println(message);
-        System.out.println(ANSI_GREEN + beautiflJson(json) + ANSI_RESET);
+        System.out.println(ANSI_GREEN + beautifulJson(json) + ANSI_RESET);
     }
 
     public static void printError(Object object){
         Gson gson = new Gson();
         String json = gson.toJson(object);
-        System.out.println(ANSI_RED + beautiflJson(json) + ANSI_RESET);
+        System.out.println(ANSI_RED + beautifulJson(json) + ANSI_RESET);
     }
 
-    public static void unhendeledError(){
-        System.out.println(ANSI_RED + "unhendeledError" + ANSI_RESET);
+    public static void unhandledError(){
+        System.out.println(ANSI_RED + "unhandledError" + ANSI_RESET);
     }
 }
